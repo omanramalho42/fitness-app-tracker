@@ -8,6 +8,8 @@ import { NutritionTab } from "@/components/tabs/nutrition-tab"
 import { ProfileTab } from "@/components/tabs/profile-tab"
 import { ExerciseDetails } from "@/components/exercise-details"
 import { WorkoutDetails } from "@/components/workout-details"
+import SocialPage from "./social-midia/page"
+import RankingPage from "./ranking/page"
 
 export default function FitnessApp() {
   const [activeTab, setActiveTab] = useState("home")
@@ -47,6 +49,8 @@ export default function FitnessApp() {
         {activeTab === "workout" && <WorkoutTab />}
         {activeTab === "nutrition" && <NutritionTab />}
         {activeTab === "profile" && <ProfileTab />}
+        {activeTab === "social-midia" && <SocialPage />}
+        {activeTab === "ranking" && <RankingPage />}
 
         <MobileNav activeTab={activeTab} onTabChange={setActiveTab} />
       </div>

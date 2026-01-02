@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Dumbbell, Apple, User } from "lucide-react"
+import { Home, Dumbbell, Apple, User, Trophy, ChartArea } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface MobileNavProps {
@@ -14,6 +14,8 @@ export function MobileNav({ activeTab, onTabChange }: MobileNavProps) {
     { id: "workout", label: "Treino", icon: Dumbbell },
     { id: "nutrition", label: "Nutrição", icon: Apple },
     { id: "profile", label: "Perfil", icon: User },
+    { id: "social-midia", label: "Social", icon: ChartArea },
+    { id: "ranking", label: "Ranking", icon: Trophy },
   ]
 
   return (
@@ -29,7 +31,7 @@ export function MobileNav({ activeTab, onTabChange }: MobileNavProps) {
                 key={tab.id}
                 onClick={() => onTabChange(tab.id)}
                 className={cn(
-                  "flex flex-col items-center gap-1 min-w-[64px] transition-colors",
+                  "flex flex-col items-center gap-1 min-w-16 transition-colors",
                   isActive ? "text-primary" : "text-muted-foreground",
                 )}
               >
