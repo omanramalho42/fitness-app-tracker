@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -9,6 +9,9 @@ import { Badge } from "@/components/ui/badge"
 import { Bell, Flame, ArrowRight, Play, TrendingUp } from "lucide-react"
 import { Progress } from "@/components/ui/progress"
 import { StreakModal } from "@/components/streak-modal"
+
+import SelectModalWorkout from "../modality-picker"
+import ModalityPicker from "../modality-picker"
 
 type WorkoutCategory = "warmup" | "cardio" | "strength"
 type WorkoutDay = "seg" | "ter" | "qua" | "qui" | "sex" | "sab" | "dom"
@@ -23,6 +26,44 @@ interface Exercise {
   dayOfWeek: WorkoutDay
 }
 
+type WorkoutSchedule = Record<WorkoutDay, string>
+
+type WorkoutByModality = {
+  [key: string]: WorkoutSchedule
+}
+
+export const WORKOUT_SCHEDULES: WorkoutByModality = {
+  "jiu-jitsu": {
+    seg: "Técnica + Drills",
+    ter: "Rolo Leve",
+    qua: "Técnica + Posicional",
+    qui: "Rolo Forte",
+    sex: "Técnica + Finalizações",
+    sab: "Open Mat",
+    dom: "Descanso",
+  },
+
+  "muay-thay": {
+    seg: "Técnica de Chutes",
+    ter: "Boxe + Manoplas",
+    qua: "Condicionamento",
+    qui: "Clinch + Joelhos",
+    sex: "Sparring",
+    sab: "Técnica Geral",
+    dom: "Descanso",
+  },
+
+  "musculacao": {
+    seg: "Peito + Tríceps",
+    ter: "Costas + Bíceps",
+    qua: "Pernas",
+    qui: "Ombro + Abdômen",
+    sex: "Full Body",
+    sab: "Cardio Leve",
+    dom: "Descanso",
+  },
+}
+
 const workoutSchedule: Record<WorkoutDay, string> = {
   seg: "Peito, Tríceps e Ombro",
   ter: "Costas e Bíceps",
@@ -31,6 +72,16 @@ const workoutSchedule: Record<WorkoutDay, string> = {
   sex: "Peito, Tríceps e Ombro",
   sab: "Costas e Bíceps",
   dom: "Descanso",
+}
+
+const modelWrokoutSchedule: Record<WorkoutDay, string> = {
+  seg: "JiuJitsu",
+  ter: "Muay Thai",
+  qua: "Natação",
+  qui: "Descanso",
+  sex: "Musculação",
+  sab: "Cooper",
+  dom: "Futebol",
 }
 
 const allExercises: Exercise[] = [
@@ -144,6 +195,23 @@ export function HomeTab({ onExerciseClick }: HomeTabProps) {
   const [selectedDay, setSelectedDay] = useState<WorkoutDay>("qua")
   const [selectedCategory, setSelectedCategory] = useState<WorkoutCategory | "all">("all")
 
+  const [modality, setModality] = useState("")
+  const handleModalityChange = useCallback(
+    (value: string) => {
+      setModality(value)
+    },
+    [],
+  )
+  //MODALIDADES DISPONIVEIS
+  //CRIAR MODALIDADE CASO NÃO EXISTA
+  //ABRIR MODAL DE CRIAÇÃO DE MODALIDADE
+  //CRIAR NO BANCO DE DADOS MODALIDADE NOVA
+  //MODALIDADE OBJETO JSON NOME, DESCRIÇÃO, IMAGEURL, CREATEDAT, UPDATEDAT, CRONID, CRON?, EXERCICIES?
+  //A MODALIDADE VAI TER UM UNICO CRONOGRAMA INICIALMENTE COMO NULL
+  //A MODALIDADE VAI TER UMA OU MAIS CATEGORIAS VINCULADAS
+
+  //
+
   const weekDays: { label: string; value: WorkoutDay; date: number }[] = [
     { label: "Dom", value: "dom", date: 11 },
     { label: "Seg", value: "seg", date: 12 },
@@ -160,7 +228,10 @@ export function HomeTab({ onExerciseClick }: HomeTabProps) {
     return matchesDay && matchesCategory
   })
 
-  const isRestDay = workoutSchedule[selectedDay] === "Descanso"
+  const workoutOfTheDay =
+    modelWrokoutSchedule?.[selectedDay] ?? "Descanso"
+
+  const isRestDay = modelWrokoutSchedule[selectedDay] === "Descanso"
 
   const recentActivities = [
     { name: "Caminhada", value: "7890", unit: "passos", icon: "🚶", time: "Hoje às 10:45am", color: "bg-primary" },
@@ -249,15 +320,32 @@ export function HomeTab({ onExerciseClick }: HomeTabProps) {
 
       {/* Workout Schedule Display */}
       <Card className="bg-secondary/50 border-primary/20">
-        <CardContent className="p-4">
+        <CardContent className="flex flex-col space-y-6 p-4">
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
+                Modalidade escolhida
+              </p>
+              <p className="font-bold text-lg">{modality}</p>
+            </div>
+          </div>
+
+          <ModalityPicker
+            onChange={handleModalityChange}
+          />
+
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Treino do Dia</p>
               <p className="font-bold text-lg">{workoutSchedule[selectedDay]}</p>
             </div>
-            {workoutSchedule[selectedDay] !== "Descanso" && (
+            {workoutSchedule[selectedDay] !== "Descanso" ? (
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                 <span className="text-2xl">💪</span>
+              </div>
+            ) : (
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                <span className="text-2xl">😴</span>
               </div>
             )}
           </div>

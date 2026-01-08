@@ -3,6 +3,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Flame, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { DialogTitle } from "@radix-ui/react-dialog"
 
 interface StreakModalProps {
   open: boolean
@@ -16,6 +17,7 @@ export function StreakModal({ open, onOpenChange }: StreakModalProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-sm p-0 gap-0 bg-card border-2 border-border overflow-hidden">
+        <DialogTitle />
         {/* Close Button */}
         <Button
           size="icon"
@@ -48,7 +50,7 @@ export function StreakModal({ open, onOpenChange }: StreakModalProps) {
           <div className="space-y-2">
             <div className="h-3 bg-secondary rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-destructive to-primary rounded-full"
+                className="h-full bg-linear-to-r from-destructive to-primary rounded-full"
                 style={{ width: "43%" }}
               />
             </div>

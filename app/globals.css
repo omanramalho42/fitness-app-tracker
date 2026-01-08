@@ -148,4 +148,55 @@
   *::-webkit-scrollbar-thumb:hover {
     background: oklch(0.75 0.22 135);
   }
+
+  .resource-image {
+    width             : 20px;
+    height            : 20px;
+    border-radius     : 100%;
+    margin-inline-end : 5px;
+
+    background        : var(--b-primary-90);
+  }
+
+
+  .b-sch-event-tooltip {
+    min-width : 190px;
+
+    dl, dt, dd {
+      padding : 0;
+      margin  : 0;
+    }
+
+    dd {
+      display        : flex;
+      flex-direction : row;
+      align-items    : center;
+      margin-top     : 0.3em;
+      line-height    : 1em;
+
+      .image {
+        height : 250px;
+      }
+    }
+
+    dt {
+      font-weight : bold;
+
+      &:not(:first-child) {
+        margin-top : 1em;
+      }
+    }
+  }
+
+  @media (max-height : 800px) {
+    .b-sch-event-tooltip dd .image {
+      height : 150px;
+    }
+  }
+
+  @media (max-width : 320px) {
+    .b-sch-event-tooltip dd .image {
+      height : 100px;
+    }
+  }
 }

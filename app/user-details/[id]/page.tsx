@@ -1,11 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent } from "@/components/ui/card"
+
+import { useState } from "react"
+
 import {
   Dialog,
   DialogContent,
@@ -14,8 +12,33 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { ArrowLeft, MoreVertical, Trophy, Heart, MessageCircle, Share2, Zap } from "lucide-react"
+
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger
+} from "@/components/ui/tabs"
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu"
+
+import {
+  ArrowLeft,
+  MoreVertical,
+  Trophy,
+  Heart,
+  MessageCircle,
+  Share2,
+  Zap
+} from "lucide-react"
 
 // Mock data - em produção viria de uma API
 const getUserData = (id: string) => ({

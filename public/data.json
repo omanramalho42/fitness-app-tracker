@@ -1,0 +1,325 @@
+{
+  "success"   : true,
+  "resources" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "name"       : "Bryntum team",
+        "eventColor" : "blue"
+      },
+      {
+        "id"         : 2,
+        "name"       : "Hotel Park",
+        "eventColor" : "orange"
+      },
+      {
+        "id"         : 3,
+        "name"       : "Michael Johnson",
+        "eventColor" : "deep-orange"
+      }
+    ]
+  },
+  "events" : {
+    "rows" : [
+      {
+        "id"         : 1,
+        "startDate"  : "2022-03-11T14:00:00",
+        "endDate"    : "2022-03-18T12:00:00",
+        "name"       : "Hackathon",
+        "allDay"     : true,
+        "resourceId" : 1,
+        "eventColor" : "green",
+        "icon"       : "fa-code"
+      },
+      {
+        "id"         : 2,
+        "startDate"  : "2022-03-11T14:00:00",
+        "endDate"    : "2022-03-11T18:00:00",
+        "name"       : "Hotel check-in ",
+        "icon"       : "fa-person-walking-luggage",
+        "imagePath"  : "images/check-in.png",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 3,
+        "startDate"  : "2022-03-11T18:00:00",
+        "endDate"    : "2022-03-11T20:00:00",
+        "name"       : "Relax and official arrival beer",
+        "icon"       : "fa-beer-mug-empty",
+        "allDay"     : true,
+        "resourceId" : 3
+      },
+      {
+        "id"         : 4,
+        "startDate"  : "2022-03-11T20:00:00",
+        "endDate"    : "2022-03-11T21:30:00",
+        "name"       : "Dinner",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-pizza-slice",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 5,
+        "startDate"  : "2022-03-12T09:00:00",
+        "endDate"    : "2022-03-12T10:00:00",
+        "name"       : "Breakfast",
+        "icon"       : "fa-mug-saucer",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 6,
+        "startDate"  : "2022-03-12T10:00:00",
+        "endDate"    : "2022-03-12T12:00:00",
+        "name"       : "Team Scrum",
+        "icon"       : "fa-users-rectangle",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 7,
+        "startDate"  : "2022-03-12T12:00:00",
+        "endDate"    : "2022-03-12T14:00:00",
+        "name"       : "Scheduler Grid introduction + review",
+        "icon"       : "fa-chart-bar",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 8,
+        "startDate"  : "2022-03-12T14:00:00",
+        "endDate"    : "2022-03-12T15:00:00",
+        "name"       : "Lunch",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-utensils",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 9,
+        "startDate"  : "2022-03-12T15:00:00",
+        "endDate"    : "2022-03-12T19:00:00",
+        "name"       : "Active client project review",
+        "icon"       : "fa-chart-gantt",
+        "imagePath"  : "images/project.png",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 10,
+        "startDate"  : "2022-03-12T19:00:00",
+        "endDate"    : "2022-03-12T20:30:00",
+        "name"       : "Dinner",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-pizza-slice",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 11,
+        "startDate"  : "2022-03-13T09:00:00",
+        "endDate"    : "2022-03-13T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 12,
+        "startDate"  : "2022-03-13T10:00:00",
+        "endDate"    : "2022-03-13T12:00:00",
+        "name"       : "Roadmap",
+        "desc"       : "Roadmap presentation for 2022",
+        "icon"       : "fa-road",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 13,
+        "startDate"  : "2022-03-13T12:00:00",
+        "endDate"    : "2022-03-13T14:00:00",
+        "name"       : "Review",
+        "desc"       : "Review tickets and decide features to add",
+        "icon"       : "fa-ticket",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 14,
+        "startDate"  : "2022-03-13T14:00:00",
+        "endDate"    : "2022-03-13T15:00:00",
+        "name"       : "Lunch",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-utensils",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 15,
+        "startDate"  : "2022-03-13T15:00:00",
+        "endDate"    : "2022-03-13T19:00:00",
+        "name"       : "Programming",
+        "icon"       : "fa-keyboard",
+        "imagePath"  : "images/coding.png",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 16,
+        "startDate"  : "2022-03-13T19:00:00",
+        "endDate"    : "2022-03-13T20:30:00",
+        "name"       : "Dinner",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-pizza-slice",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 17,
+        "startDate"  : "2022-03-14T09:00:00",
+        "endDate"    : "2022-03-14T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 18,
+        "startDate"  : "2022-03-14T10:00:00",
+        "endDate"    : "2022-03-14T18:00:00",
+        "name"       : "Excursion",
+        "resourceId" : 3,
+        "icon"       : "fa-mountain-sun",
+        "desc"       : "Hike, picnic, and enjoy a guided tour. Experience the breathtaking sunset before heading home.",
+        "imagePath"  : "images/excursion.png"
+      },
+      {
+        "id"         : 19,
+        "startDate"  : "2022-03-14T18:00:00",
+        "endDate"    : "2022-03-14T22:00:00",
+        "name"       : "Team Building",
+        "resourceId" : 3,
+        "icon"       : "fa-champagne-glasses",
+        "imagePath"  : "images/team.png",
+        "eventColor" : "green"
+      },
+      {
+        "id"         : 20,
+        "startDate"  : "2022-03-15T09:00:00",
+        "endDate"    : "2022-03-15T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 21,
+        "startDate"  : "2022-03-15T14:00:00",
+        "endDate"    : "2022-03-15T15:00:00",
+        "name"       : "Lunch",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-utensils",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 22,
+        "startDate"  : "2022-03-15T19:00:00",
+        "endDate"    : "2022-03-15T20:30:00",
+        "name"       : "Dinner",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-pizza-slice",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 23,
+        "startDate"  : "2022-03-15T00:00:00",
+        "endDate"    : "2022-03-16T00:00:00",
+        "name"       : "Gantt review + development",
+        "allDay"     : true,
+        "icon"       : "fa-bars-staggered",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 24,
+        "startDate"  : "2022-03-16T09:00:00",
+        "endDate"    : "2022-03-16T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 25,
+        "startDate"  : "2022-03-16T14:00:00",
+        "endDate"    : "2022-03-16T15:00:00",
+        "name"       : "Lunch",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-utensils",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 26,
+        "startDate"  : "2022-03-16T18:00:00",
+        "endDate"    : "2022-03-16T21:30:00",
+        "name"       : "Split.JS conference",
+        "desc"       : "Monitoring and Reproducing Errors in Web Applications + Late Dinner or AfterParty",
+        "icon"       : "fa-people-line",
+        "resourceId" : 3
+      },
+      {
+        "id"         : 27,
+        "startDate"  : "2022-03-16T00:00:00",
+        "endDate"    : "2022-03-17T00:00:00",
+        "name"       : "Root Cause ticket bash",
+        "allDay"     : true,
+        "icon"       : "fa-bug",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 28,
+        "startDate"  : "2022-03-17T09:00:00",
+        "endDate"    : "2022-03-17T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 29,
+        "startDate"  : "2022-03-17T14:00:00",
+        "endDate"    : "2022-03-17T15:00:00",
+        "name"       : "Lunch",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-utensils",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 30,
+        "startDate"  : "2022-03-17T19:00:00",
+        "endDate"    : "2022-03-17T20:30:00",
+        "name"       : "Dinner",
+        "desc"       : "In hotel restaurant",
+        "icon"       : "fa-pizza-slice",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 31,
+        "startDate"  : "2022-03-17T00:00:00",
+        "endDate"    : "2022-03-18T00:00:00",
+        "name"       : "Pair programming sessions",
+        "allDay"     : true,
+        "icon"       : "fa-code-compare",
+        "resourceId" : 1
+      },
+      {
+        "id"         : 32,
+        "startDate"  : "2022-03-18T09:00:00",
+        "endDate"    : "2022-03-18T10:00:00",
+        "name"       : "Breakfast",
+        "desc"       : "Enjoy the complimentary breakfast",
+        "icon"       : "fa-mug-saucer",
+        "resourceId" : 2
+      },
+      {
+        "id"         : 33,
+        "startDate"  : "2022-03-18T10:00:00",
+        "endDate"    : "2022-03-18T15:00:00",
+        "name"       : "Fly home",
+        "desc"       : "Checkout in the hotel till 10:00 and then use shuttle to the airport",
+        "icon"       : "fa-plane-departure",
+        "imagePath"  : "images/plane.png",
+        "resourceId" : 3
+      }
+    ]
+  }
+}
