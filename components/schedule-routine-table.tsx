@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+
 import {
   Table,
   TableBody,
@@ -11,14 +12,16 @@ import {
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+
+import { addMinutes } from "@/lib/utils"
+
+import type { ScheduleRoutineTableProps } from "@/lib/types"
+
 import {
   Clock,
   ChevronDown,
   ChevronUp
 } from "lucide-react"
-import { ScheduleRoutineTableProps } from "@/lib/types"
-import { MOCK_EXERCISES } from "@/lib/constants"
-import { addMinutes } from "@/lib/utils"
 
 export function ScheduleRoutineTable({
   startTime = "07:30",

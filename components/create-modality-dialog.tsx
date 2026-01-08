@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react'
 
-import type { ModalityProps } from '@/lib/types'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { toast } from 'sonner'
 
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
@@ -21,11 +23,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { toast } from 'sonner'
-
 import {
   Form,
   FormControl,
@@ -45,6 +42,8 @@ import {
 
 import { cn } from '@/lib/utils'
 import { customEmojis } from '@/lib/constants'
+
+import type { ModalityProps } from '@/lib/types'
 
 import { CircleOff, Plus, PlusSquare } from 'lucide-react'
 

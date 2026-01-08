@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { toast } from 'sonner'
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,8 +14,7 @@ import {
   AlertDialogCancel,
 } from '@/components/ui/alert-dialog'
 
-import type { ExerciseProps } from '@/components/modality-picker'
-import { toast } from 'sonner'
+import type { ExerciseProps } from '@/lib/types'
 
 interface DeleteExerciseDialogProps {
   exercise: ExerciseProps

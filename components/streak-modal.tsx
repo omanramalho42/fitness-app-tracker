@@ -1,9 +1,15 @@
 "use client"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle
+} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
-import { Flame, X } from "lucide-react"
+
 import { cn } from "@/lib/utils"
-import { DialogTitle } from "@radix-ui/react-dialog"
+
+import { Flame, X } from "lucide-react"
 
 interface StreakModalProps {
   open: boolean

@@ -1,6 +1,9 @@
 "use client"
 
+import Image from 'next/image'
 import React, { useCallback, useState } from 'react'
+
+import { Control, useController } from 'react-hook-form'
 
 import { Label } from '@/components/ui/label'
 import {
@@ -26,16 +29,16 @@ import {
 } from '@/components/ui/popover'
 import { Button } from '@/components/ui/button'
 
-import { Check, ChevronsUpDown } from "lucide-react"
+import CreateExerciceDialog from '@/components/create-exercicie-dialog'
+
+import { cn } from '@/lib/utils'
+
+import type { CreateExerciseProps, ExerciseProps } from '@/lib/types'
+import type { CategorieSchemaType } from '@/components/create-category-dialog'
 
 import { availableExercises } from '@/lib/constants'
-import { CreateExerciseProps, ExerciseProps } from '@/lib/types'
-import CreateExerciceDialog from '@/components/create-exercicie-dialog'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
 
-import { Control, useController } from 'react-hook-form'
-import { CategorieSchemaType } from '@/components/create-category-dialog'
+import { Check, ChevronsUpDown } from "lucide-react"
 
 interface MultiExercisePickerProps {
   control: Control<CategorieSchemaType>

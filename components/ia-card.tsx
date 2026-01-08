@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CreateIaFitnessDialog from './create-ia-fitness-dialog'
+import CreateIaFitnessDialog from '@/components/create-ia-fitness-dialog'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"

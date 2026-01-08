@@ -1,6 +1,12 @@
 "use client"
 
+import Image from 'next/image'
+
 import React, { useCallback, useState } from 'react'
+
+import { Control, useController } from 'react-hook-form'
+
+import CreateCategoryDialog from '@/components/create-category-dialog'
 
 import { Label } from '@/components/ui/label'
 import {
@@ -26,15 +32,12 @@ import {
 } from '@/components/ui/popover'
 import { Button } from '@/components/ui/button'
 
-import { Check, ChevronsUpDown } from "lucide-react"
-
-import { CreateCategoryProps, CategoryProps } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 
-import { Control, useController } from 'react-hook-form'
-import { ModalitySchemaProps } from './create-modality-dialog'
-import CreateCategoryDialog from './create-category-dialog'
+import type { ModalitySchemaProps } from '@/components/create-modality-dialog'
+import type { CreateCategoryProps, CategoryProps } from '@/lib/types'
+
+import { Check, ChevronsUpDown } from "lucide-react"
 
 interface MultiCategoryPickerProps {
   control: Control<ModalitySchemaProps>

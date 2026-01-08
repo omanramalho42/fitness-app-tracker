@@ -1,17 +1,33 @@
 "use client"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { CalendarDays, Repeat, Dumbbell, Layers, Download, BellIcon } from "lucide-react"
+import { useState } from "react"
+
 import { format } from "date-fns"
 import { ptBR } from "date-fns/locale"
-import { Button } from "./ui/button"
-import { ScheduleRoutineTable } from "./schedule-routine-table"
-import { ScheduleRoutineByCategory } from "./schedule-routine-category"
-import { Label } from "./ui/label"
-import { Switch } from "./ui/switch"
-import { Checkbox } from "./ui/checkbox"
-import { useState } from "react"
+
+import { ScheduleRoutineByCategory } from "@/components/schedule-routine-category"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import { Switch } from "@/components/ui/switch"
+import { Checkbox } from "@/components/ui/checkbox"
+
+import {
+  CalendarDays,
+  Repeat,
+  Dumbbell,
+  Layers,
+  Download,
+  BellIcon
+} from "lucide-react"
 
 type ScheduleSummaryProps = {
   data: {

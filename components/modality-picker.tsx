@@ -18,9 +18,9 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 
 import { cn } from '@/lib/utils'
 
+import type { ModalityProps } from '@/lib/types'
+
 import { ChevronsUpDownIcon, Check } from 'lucide-react'
-import { CategoryProps } from './category-picker'
-import { ModalityProps } from '@/lib/types'
 
 interface ModalityPickerProps {
   onChange: (value: string) => void;

@@ -12,10 +12,10 @@ import {
   AlertDialogCancel,
 } from '@/components/ui/alert-dialog'
 
-import { CronProps } from '@/lib/types'
+import type { ScheduleCronProps } from '@/lib/types'
 
 interface DeleteCronDialogProps {
-  cron: CronProps
+  cron: ScheduleCronProps
   trigger: React.ReactNode
 }
 

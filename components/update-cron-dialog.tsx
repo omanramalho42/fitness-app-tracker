@@ -17,11 +17,11 @@ import { Badge } from '@/components/ui/badge'
 
 import { Check, PlusSquare, X } from 'lucide-react'
 
-import { CronProps } from '@/lib/types'
+import type { ScheduleCronProps } from '@/lib/types'
 
 interface UpdateCronProps {
   trigger?: React.ReactNode
-  onSuccessCallback: (cron: CronProps) => void;
+  onSuccessCallback: (cron: ScheduleCronProps) => void;
   cronId: string;
 } 
 

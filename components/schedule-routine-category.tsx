@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+
+import { ScheduleRoutineTable } from "@/components/schedule-routine-table"
 import {
   Select,
   SelectContent,
@@ -9,11 +11,12 @@ import {
   SelectValue
 } from "@/components/ui/select"
 import { Card } from "@/components/ui/card"
-import { Layers } from "lucide-react"
+import { Label } from "@/components/ui/label"
 
-import { ScheduleRoutineTable } from "./schedule-routine-table"
+
 import { MOCK_ROUTINES } from "@/lib/constants"
-import { Label } from "./ui/label"
+
+import { Layers } from "lucide-react"
 
 export function ScheduleRoutineByCategory() {
   const [category, setCategory] = useState(MOCK_ROUTINES[0].name)

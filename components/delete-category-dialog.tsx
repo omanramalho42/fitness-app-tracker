@@ -19,7 +19,7 @@ import {
   AlertDialogCancel,
 } from '@/components/ui/alert-dialog'
 
-import type { CategoryProps } from './category-picker'
+import type { CategoryProps } from '@/lib/types'
 
 // import { TransactionType } from '@/lib/types'
 // import { DeleteCategorySchemaType } from '@/schema/categories'

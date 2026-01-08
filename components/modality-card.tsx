@@ -2,6 +2,8 @@
 
 import React, { useCallback, useState } from 'react'
 
+import { toast } from 'sonner'
+
 import CreateModalityDialog from '@/components/create-modality-dialog'
 import DeleteModalityDialog from '@/components/delete-modality-dialog'
 import UpdateModalityDialog from '@/components/update-modality-dialog'
@@ -18,7 +20,6 @@ import {
   Plus,
   Trash2
 } from 'lucide-react'
-import { toast } from 'sonner'
 
 const ModalityCard:React.FC = () => {
   const [modalities, setModalities] = useState<ModalityProps[]>([

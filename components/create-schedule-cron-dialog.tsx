@@ -79,8 +79,6 @@ const CreateScheduleCronDialog:React.FC<CreateCronProps> = ({ trigger }) => {
     })
   }
 
-  const crons = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
-
   const scheduleCronSchema = z.object({
     name: z.string(),
     description: z.string().optional(),
@@ -178,7 +176,7 @@ const CreateScheduleCronDialog:React.FC<CreateCronProps> = ({ trigger }) => {
         
         <Form {...form}>
           <form className="space-y-4">
-            <div className="flex w-full flex-col gap-6">
+            <div className="">
               <Tabs defaultValue="schedule">
                 <TabsList>
                   <TabsTrigger value="schedule">cronograma</TabsTrigger>
@@ -555,11 +553,6 @@ const CreateScheduleCronDialog:React.FC<CreateCronProps> = ({ trigger }) => {
                       
 
                     </CardContent>
-{/* 
-                    <CardFooter>
-                      <Button>Criar</Button>
-                    </CardFooter> */}
-
                   </Card>
                 </TabsContent>
 

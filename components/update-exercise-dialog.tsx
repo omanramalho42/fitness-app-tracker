@@ -7,7 +7,9 @@ import { redirect } from 'next/navigation'
 import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
 
-import CategoryPicker, { CategoryProps } from '@/components/category-picker'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { z } from "zod"
+import { toast } from 'sonner'
 
 import {
   Dialog,
@@ -24,16 +26,26 @@ import { Button } from "@/components/ui/button"
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger
+} from '@/components/ui/popover'
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel
+} from './ui/form'
+
+import { cn } from '@/lib/utils'
+import { customEmojis } from '@/lib/constants'
+
+import type { ExerciseProps, UpdateExerciseProps } from '@/lib/types'
 
 import { CircleOff, Plus, PlusSquare } from 'lucide-react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { z } from "zod"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from './ui/form'
-import { cn } from '@/lib/utils'
-import { ExerciseProps, UpdateExerciseProps } from './modality-picker'
-import { toast } from 'sonner'
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
-import { customEmojis } from '@/lib/constants'
 
 interface UpdateExerciseDialogProps {
   exerciseId: string;
@@ -186,17 +198,6 @@ const UpdateExerciseDialog:React.FC<UpdateExerciseDialogProps> = ({
                   </FormItem>
                 )}
               />
-            </div>
-
-            <div className="space-y-3">
-              <Label
-                htmlFor="exercise-category"
-                className="text-sm font-medium"
-              >
-                Categoria
-              </Label>
-
-              <CategoryPicker onChange={handleCategoryChange} />
             </div>
 
             <div className="space-y-3">

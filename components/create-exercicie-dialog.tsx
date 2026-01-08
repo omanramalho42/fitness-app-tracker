@@ -26,7 +26,7 @@ import { toast } from 'sonner'
 
 import { cn } from '@/lib/utils'
 
-import type { CreateExerciseProps, ExerciseProps } from '@/components/modality-picker'
+import type { CreateExerciseProps, ExerciseProps } from '@/lib/types'
 
 import { Clock, Plus, PlusSquare, Video } from 'lucide-react'
 
